@@ -13,7 +13,7 @@ exports.path = {
 	// Server
 	SERVER_TS: './src/server/**/*.ts',
 	INDEX: './out/server/index.js',
-	SERVER_DIST: './out/server',
+	SERVER_DIST: './out',
 	TS_CONFIG: './tsconfig.json'
 };
 
