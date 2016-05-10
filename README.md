@@ -5,9 +5,14 @@
 npm install && tsd install
 ```
 
-### Start:
+### Build:
 ```
-npm start
+npm run build
+```
+
+### Start {version}:
+```
+npm run {version}
 ```
 
 ### Test:
