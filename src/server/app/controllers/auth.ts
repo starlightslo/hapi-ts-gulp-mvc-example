@@ -1,6 +1,6 @@
 /// <reference path="../../../../typings/tsd.d.ts" />
 
-import * as Joi from 'joi'
+import * as Joi from 'joi';
 
 exports.loginValidate = {
 	auth: false,
@@ -10,21 +10,21 @@ exports.loginValidate = {
 			password: Joi.string().required()
 		}
 	}
-}
+};
 
 exports.login = function(request, reply) {
-	console.log(request.payload.email)
-	console.log(request.payload.password)
+	console.log(request.payload.email);
+	console.log(request.payload.password);
 
 	// Generating token	
-	const jwt = require('jsonwebtoken')
+	const jwt = require('jsonwebtoken');
 	const token = jwt.sign({
 		username: request.payload.email
-	}, request.server.config.secret)
+	}, request.server.config.secret);
 
 	// Store token
-	request.yar.set('token', token)
+	request.yar.set('token', token);
 
 	// Redirect
-	reply.redirect('./../admin')
-}
+	reply.redirect('./../admin');
+};

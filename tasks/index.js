@@ -1,18 +1,21 @@
-require('require-dir')('client')
-require('require-dir')('server')
+/*jshint esversion: 6 */
 
-const gulp = require('gulp')
+require('require-dir')('client');
+require('require-dir')('server');
 
-const path = require('./const').path
-const tasks = require('./const').tasks
+const gulp = require('gulp');
+
+const path = require('./const').path;
+const tasks = require('./const').tasks;
 
 gulp.task(tasks.WATCH, function() {
-	gulp.watch(path.JS, [tasks.CLIENT_JS_DIST])
-	gulp.watch(path.CSS, [tasks.CLIENT_CSS_DIST])
-	gulp.watch(path.IMAGE, [tasks.CLIENT_IMAGE_DIST])
-	gulp.watch(path.FONT, [tasks.CLIENT_FONT_DIST])
-	gulp.watch(path.HTML, [tasks.CLIENT_VIEWS_DIST])
-})
+	gulp.watch(path.JS, [tasks.CLIENT_JS_DIST]);
+	gulp.watch(path.CSS, [tasks.CLIENT_CSS_DIST]);
+	gulp.watch(path.IMAGE, [tasks.CLIENT_IMAGE_DIST]);
+	gulp.watch(path.FONT, [tasks.CLIENT_FONT_DIST]);
+	gulp.watch(path.HTML, [tasks.CLIENT_VIEWS_DIST]);
+	gulp.watch(path.ALL_JS, [tasks.JSHINT]);
+});
 
 // Default Task
 gulp.task('default', [
@@ -22,5 +25,6 @@ gulp.task('default', [
 	tasks.CLIENT_IMAGE_DIST,
 	tasks.CLIENT_FONT_DIST,
 	tasks.CLIENT_VIEWS_DIST,
+	tasks.JSHINT,
 	tasks.WATCH
-])
+]);

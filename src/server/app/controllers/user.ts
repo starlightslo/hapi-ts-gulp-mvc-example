@@ -20,16 +20,16 @@ const UserData = [{
 	name: 'Jimmy',
 	gender: 'M',
 	birthDate: '1983/03/19'
-},]
+}];
 
 exports.getUsers = (request, reply) => {
-	reply(UserData)
-}
+	reply(UserData);
+};
 
 exports.getUser = (request, reply) => {
-	const id = request.params.id
+	const id = request.params.id;
 	const user = UserData.filter(data => {
 		return data.id == id
-	})
-	reply(user[0])
-}
+	});
+	reply(user[0]);
+};

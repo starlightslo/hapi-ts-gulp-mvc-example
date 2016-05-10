@@ -1,7 +1,7 @@
 /// <reference path="../../../../typings/tsd.d.ts" />
 
 // Interfaces
-import * as IServer from '../interfaces/IServerConfig'
+import * as IServer from '../interfaces/IServerConfig';
 
 /**
  * config reference:
@@ -9,16 +9,16 @@ import * as IServer from '../interfaces/IServerConfig'
  **/
 
 class Router {
-	method: string|string[]
-	path: string
-	handler: any
-	config: IServer.RouteConfig
+	method: string | string[];
+	path: string;
+	handler: any;
+	config: IServer.RouteConfig;
 
 	constructor(method: string|string[], path: string, handler: any, config?: IServer.RouteConfig) {
-		this.method = method
-		this.path = path
-		this.handler = handler
-		this.config = config
+		this.method = method;
+		this.path = path;
+		this.handler = handler;
+		this.config = config;
 	}
 
 	get(): IServer.Route {
@@ -26,12 +26,16 @@ class Router {
 			method: this.method,
 			path: this.path
 		}
-		if (this.handler) route['handler'] = this.handler
-		if (this.config) route['config'] = this.config
-		else route['config'] = {
-			auth: false
+		if (this.handler) route['handler'] = this.handler;
+		if (this.config) {
+			route['config'] = this.config;
+		} else {
+			route['config'] = {
+				auth: false
+			}
 		}
-		return route
+		return route;
 	}
 }
-export = Router
+
+export = Router;

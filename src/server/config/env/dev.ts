@@ -15,4 +15,4 @@ module.exports = {
 		port: 6379,
 		database: 'my-cache'
 	}
-}
+};

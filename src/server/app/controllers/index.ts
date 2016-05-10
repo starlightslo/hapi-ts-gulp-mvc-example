@@ -3,27 +3,27 @@
 import * as Boom from 'boom'
 
 exports.index = function(request, reply) {
-	request.log.info('just a test log')
-	reply({code: 200, result: this.test})
-}
+	request.log.info('just a test log');
+	reply({ code: 200, result: this.test });
+};
 
 exports.login = function(request, reply) {
-	reply.file(request.server.config.path.views + '/login.html')
-}
+	reply.file(request.server.config.path.views + '/login.html');
+};
 
 exports.logout = function(request, reply) {
-	request.yar.clear('token')
-	reply.redirect('login')
-}
+	request.yar.clear('token');
+	reply.redirect('login');
+};
 
 exports.admin = function(request, reply) {
-	console.log(request.auth)
+	console.log(request.auth);
 	if (request.auth.isAuthenticated) {
-		reply(request.auth.credentials)
+		reply(request.auth.credentials);
 	} else {
-		reply(Boom.unauthorized('Invalid session'))
+		reply(Boom.unauthorized('Invalid session'));
 	}
-}
+};
 
 exports.cssFile = {
 	directory: {
@@ -31,7 +31,7 @@ exports.cssFile = {
 		redirectToSlash: true,
 		index: true
 	}
-}
+};
 
 exports.jsFile = {
 	directory: {
@@ -39,7 +39,7 @@ exports.jsFile = {
 		redirectToSlash: true,
 		index: true
 	}
-}
+};
 
 exports.imageFile = {
 	directory: {
@@ -47,7 +47,7 @@ exports.imageFile = {
 		redirectToSlash: true,
 		index: true
 	}
-}
+};
 
 exports.fontFile = {
 	directory: {
@@ -55,4 +55,4 @@ exports.fontFile = {
 		redirectToSlash: true,
 		index: true
 	}
-}
+};

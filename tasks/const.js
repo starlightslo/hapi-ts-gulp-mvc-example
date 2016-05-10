@@ -1,5 +1,7 @@
+/*jshint esversion: 6 */
+
 exports.path = {
-	ALL_JS: './**/*.js',
+	ALL_JS: './src/**/*.js',
 
 	// Client
 	CLIENT_PUBLIC_DIST: './out/client/public',
