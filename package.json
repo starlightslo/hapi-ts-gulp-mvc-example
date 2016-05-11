@@ -4,7 +4,7 @@
   "description": "Example of Hapi app written in Typescript with gulp and unit tests.",
   "main": "index.js",
   "scripts": {
-    "test": "NODE_ENV=test node_modules/.bin/mocha test/",
+    "test": "NODE_ENV=test node_modules/.bin/lab test/",
     "start": "NODE_ENV=production node out/server/index.js",
     "dev": "NODE_ENV=dev node_modules/.bin/gulp",
     "alpha": "NODE_ENV=alpha node_modules/.bin/gulp",
@@ -14,7 +14,7 @@
   "author": "Tony Huang <tony@huang.ninja> (http://huang.ninja)",
   "license": "ISC",
   "devDependencies": {
-    "chai": "^3.5.0",
+    "code": "^2.3.0",
     "gulp": "^3.9.1",
     "gulp-file-cache": "0.0.1",
     "gulp-htmlmin": "^2.0.0",
@@ -25,7 +25,7 @@
     "gulp-rev-append": "^0.1.6",
     "gulp-typescript": "^2.13.0",
     "gulp-uglify": "^1.5.3",
-    "mocha": "^2.4.5",
+    "lab": "^10.5.1",
     "require-dir": "^0.3.0"
   },
   "dependencies": {

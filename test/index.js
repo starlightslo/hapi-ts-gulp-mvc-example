@@ -1,15 +1,23 @@
 /*jshint esversion: 6 */
 
-const chai = require('chai');
-const assert = chai.assert;
+const Code = require('code');
+const Lab = require('lab');
+const lab = exports.lab = Lab.script();
 
 const config = require('../out/server/config/config');
 const Server = require('../out/server/server');
 
 const server = new Server(config);
 
+// To make lab look like BDD:
+const describe = lab.describe;
+const it = lab.it;
+const before = lab.before;
+const after = lab.after;
+const expect = Code.expect;
+
 describe('API tests', () => {
-	it('Start server', (done) => {
+	before((done) => {
 		// Start the server
 		server.start()
 		.then(() => {
@@ -26,8 +34,8 @@ describe('API tests', () => {
 			method: 'GET',
 			url: '/'
 		}, response => {
-			assert.equal(response.statusCode, 200);
-			assert.equal(response.result.code, 200);
+			expect(response.statusCode).to.equal(200);
+			expect(response.result.code).to.equal(200);
 			done();
 		});
 	});
