@@ -10,9 +10,14 @@ npm install && tsd install
 npm run build
 ```
 
-### Start {version}:
+### Run on develop environment:
 ```
-npm run {version}
+npm run dev
+```
+
+### Start:
+```
+npm start
 ```
 
 ### Test:
