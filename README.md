@@ -24,3 +24,16 @@ npm start
 ```
 npm test
 ```
+
+
+# Docker
+
+### Build docker image:
+```
+docker build -t {name} .
+```
+
+### Run:
+```
+docker run --env NODE_ENV={environment} -p {public port}:8000 {name}
+```
