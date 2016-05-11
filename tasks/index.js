@@ -17,6 +17,17 @@ gulp.task(tasks.WATCH, function() {
 	gulp.watch(path.ALL_JS, [tasks.JSHINT]);
 });
 
+// Build Task
+gulp.task(tasks.BUILD, [
+	tasks.SERVER_TS_DIST,
+	tasks.CLIENT_JS_DIST,
+	tasks.CLIENT_CSS_DIST,
+	tasks.CLIENT_IMAGE_DIST,
+	tasks.CLIENT_FONT_DIST,
+	tasks.CLIENT_VIEWS_DIST,
+	tasks.JSHINT
+]);
+
 // Default Task
 gulp.task('default', [
 	tasks.SERVER,

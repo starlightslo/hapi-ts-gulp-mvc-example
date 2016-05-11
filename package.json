@@ -5,11 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "NODE_ENV=test node_modules/.bin/lab test/",
-    "start": "NODE_ENV=production node out/server/index.js",
+    "start": "node out/server/index.js",
     "dev": "NODE_ENV=dev node_modules/.bin/gulp",
-    "alpha": "NODE_ENV=alpha node_modules/.bin/gulp",
-    "build": "NODE_ENV=beta node_modules/.bin/gulp",
-    "beta": "NODE_ENV=beta node out/server/index.js"
+    "build": "node_modules/.bin/gulp build"
   },
   "author": "Tony Huang <tony@huang.ninja> (http://huang.ninja)",
   "license": "ISC",

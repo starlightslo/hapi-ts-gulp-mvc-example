@@ -28,5 +28,6 @@ exports.tasks = {
 	SERVER_TS_DIST: 'server.build_ts:dist',
 	SERVER: 'server',
 	WATCH: 'watch',
-	JSHINT: 'jshint'
+	JSHINT: 'jshint',
+	BUILD: 'build'
 };
