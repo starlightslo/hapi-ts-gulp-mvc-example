@@ -1,10 +1,9 @@
 /// <reference path="./../../typings/tsd.d.ts" />
 
 const config = require('./config/config');
-const Server = require('./server');
+import {Server} from './server';
 
 const server = new Server(config);
-
 
 // Start the server
 server.start()

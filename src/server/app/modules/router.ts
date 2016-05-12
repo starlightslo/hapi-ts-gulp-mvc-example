@@ -38,4 +38,4 @@ class Router {
 	}
 }
 
-export = Router;
+export {Router};

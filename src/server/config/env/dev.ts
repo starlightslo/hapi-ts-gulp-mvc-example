@@ -7,12 +7,5 @@ module.exports = {
 		name: 'Sample MVC',
 		env: 'Development',
 		level: 'debug'
-	},
-	cache: {
-		engine: require('catbox-redis'),
-		name: 'session',
-		host: 'localhost',
-		port: 6379,
-		database: 'my-cache'
 	}
 };

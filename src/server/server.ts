@@ -209,4 +209,4 @@ class Server {
 	}
 }
 
-export = Server;
+export {Server};

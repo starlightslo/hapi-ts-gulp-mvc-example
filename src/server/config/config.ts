@@ -11,7 +11,8 @@ const production = require('./env/production');
 const DEV_ENV = 'dev';
 
 const defaults = {
-	appName: 'Simple MVC',
+	appName: 'Simple Node.js MVC - ' + process.env.NODE_ENV || DEV_ENV,
+	newRelicKey: '',
 	root: require('path').join(__dirname, '..'),
 	path: {
 		public: require('path').join(__dirname, '../../client/public'),
