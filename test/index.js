@@ -7,7 +7,7 @@ const lab = exports.lab = Lab.script();
 const config = require('../out/server/config/config');
 const Server = require('../out/server/server');
 
-const server = new Server(config);
+const server = new Server.Server(config);
 
 // To make lab look like BDD:
 const describe = lab.describe;

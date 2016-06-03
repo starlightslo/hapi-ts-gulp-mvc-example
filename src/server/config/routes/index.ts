@@ -1,9 +1,9 @@
 /// <reference path="../../../../typings/tsd.d.ts" />
 
-exports.register = (server, options, next) => {
-	// Router module
-	const Router = require('../../app/modules/router');
+// Router module
+import { Router } from '../../app/modules/router';
 
+exports.register = (server, options, next) => {
 	// Binder
 	server.bind({
 		test: 'Hello Route Plugin'

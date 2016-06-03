@@ -29,7 +29,8 @@ export interface Session {
 }
 
 export interface RouteConfig {
-	cache: {
+	auth: any,
+	cache?: {
 		expiresIn: number,
 		privacy: string
 	}
